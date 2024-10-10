@@ -3,7 +3,7 @@ package _20Sorting._2MergeSort;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class Merge {
+public class _1OnlineMergeSort {
 
     // Merge Sort, recursion kullandığımız ilk sıralama algoritması olacak
 
@@ -46,6 +46,7 @@ public class Merge {
         // System.out.println(end-start);
         // System.out.println(Arrays.toString(merge(arr1, arr2)));
 
+        /*
         int[] array = {1,3,7,8,2,4,5,6};
 
         double start = System.nanoTime();
@@ -54,6 +55,18 @@ public class Merge {
         System.out.println(end-start);
 
         System.out.println(Arrays.toString(mergeSort(array)));
+        */
+
+
+
+        int[] arr2 = {1, 3, 7, 8, 2, 4, 5, 6};
+
+        double start = System.nanoTime();
+        mergeSort(arr2, 0, arr2.length - 1);  // mergeSort'a start ve end parametrelerini ekledim
+        double end = System.nanoTime();
+        System.out.println(end - start);
+
+        System.out.println(Arrays.toString(arr2));
         
     }
 
@@ -110,6 +123,75 @@ public class Merge {
         }
 
         return combined;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static void mergeSort(int[] arr, int start, int end) {
+
+        if (start < end) {
+            int midIndex = start+end / 2;   //start + (end - start)
+
+            mergeSort(arr, start, midIndex);
+            mergeSort(arr, midIndex + 1, end);
+
+            merge(arr, start, midIndex, end);
+        }
+    }
+
+    public static void merge(int[] arr, int start, int mid, int end) {
+        int n1 = mid - start + 1;  // Sol yarı uzunluğu
+        int n2 = end - mid;        // Sağ yarı uzunluğu
+
+        int[] left = new int[n1];
+        int[] right = new int[n2];
+
+        // Sol yarıyı geçici diziye kopyaladım
+        for (int i = 0; i < n1; i++)
+            left[i] = arr[start + i];
+
+        // Sağ yarıyı geçici diziye kopyaladım
+        for (int j = 0; j < n2; j++)
+            right[j] = arr[mid + 1 + j];
+
+
+        int i = 0, j = 0;
+        int k = start;  // Orijinal dizide başlangıç indexi
+        while (i < n1 && j < n2) {
+            if (left[i] <= right[j]) {
+                arr[k] = left[i];
+                i++;
+            } else {
+                arr[k] = right[j];
+                j++;
+            }
+            k++;
+        }
+
+        // Sol yarıdan kalan elemanları ekleme:
+        while (i < n1) {
+            arr[k] = left[i];
+            i++;
+            k++;
+        }
+
+        // Sağ yarıdan kalan elemanları ekleme:
+        while (j < n2) {
+            arr[k] = right[j];
+            j++;
+            k++;
+        }
     }
     
 }

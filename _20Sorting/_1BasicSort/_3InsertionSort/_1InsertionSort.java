@@ -1,6 +1,6 @@
 package _20Sorting._1BasicSort._3InsertionSort;
 
-public class InsertionSort {
+public class _1InsertionSort {
 
     // InsertionSort daima array'in 2. elemanıyla başlar
     // sonrasında; onun öncesindeki her elemanla karşılaştırılır ve eğer küçükse yer değiştirirler, küçük değilse:

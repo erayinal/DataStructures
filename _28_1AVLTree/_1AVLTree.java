@@ -1,4 +1,4 @@
-package _28AVLTree;
+package _28_1AVLTree;
 
 //AVL Tree'lerde aslında bir Binary Search Tree'nin bir türüdür yani BST'nin bütün özellikleri AVL'de de vardır
 // Ama AVL Tree'lerde ek olarak özellikler vardır

@@ -1,4 +1,4 @@
-package _29SplayTree;
+package _28_2SplayTree;
 
 //Splay Tree, BinarySearchTree'nin bir çeşididir
 // Kendini AVL'de olduğu gibi balanced etmez 
