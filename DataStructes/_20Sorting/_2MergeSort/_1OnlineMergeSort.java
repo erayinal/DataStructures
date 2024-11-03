@@ -29,9 +29,15 @@ public class _1OnlineMergeSort {
     //                  1,2,3,4,5,6,7,8         
     
     
-
     //! Merge sort'un Space Complexity'si O(n)'dir.
     //! Time complexity'si: array'i ikiye bölerek ayrıştırırken O(n), birleştirirken O(logn). Yani Time Complexity = O(n*logn)
+
+    // n>=30 koşuluyla Mergo sort, insertion sort'tan daha iyidir. 
+    // Insertion = O(n^2)
+    // Merge = O(nlgn)
+
+    // n elemanlı bir arrayi tek elemeana düşürmedeki adım sayısı = log 2 tabanında n = log(2)n 
+
 
 
     public static void main(String[] args) {
@@ -141,7 +147,7 @@ public class _1OnlineMergeSort {
     public static void mergeSort(int[] arr, int start, int end) {
 
         if (start < end) {
-            int midIndex = start+end / 2;   //start + (end - start)
+            int midIndex = (start+end) / 2;   //start + (end - start)
 
             mergeSort(arr, start, midIndex);
             mergeSort(arr, midIndex + 1, end);

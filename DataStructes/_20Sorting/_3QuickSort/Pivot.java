@@ -18,8 +18,7 @@ public class Pivot {
         pivot(arr, 0, 6);
 
         System.out.println(Arrays.toString(arr));
-          
-
+        
     }
 
 
