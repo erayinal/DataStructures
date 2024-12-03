@@ -36,10 +36,10 @@ public class HoareQuickSort {
     public static void quickSort(int[] arr, int low, int high){
 
         if(low < high){
-            int partitionIndex = HoareQuickSort.hoarePartition(arr, low, high);
+            int pivotIndex = hoarePartition(arr, low, high);
 
-            quickSort(arr, low, partitionIndex);
-            quickSort(arr, partitionIndex+1, high);
+            quickSort(arr, low, pivotIndex);
+            quickSort(arr, pivotIndex+1, high);
         }
     }
 

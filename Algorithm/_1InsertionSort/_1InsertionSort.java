@@ -32,17 +32,17 @@ public class _1InsertionSort{
 
     public static void insertionSort(int[] arr, int start, int end){
 
-        for(int i = start+1 ; i<end+1 ; i++){
-            int temp = arr[i];
+        for(int i = start+1 ; i<end+1 ; i++){   // i 0'dan başlamaz buna dikkat et
+            int temp = arr[i];  // Karşılaştırmak için 2. elemanı havaya kaldırıyoruz
             int j = i-1;
 
-            while(j>-1 && temp < arr[j]){
+            while(j>-1 && temp < arr[j]){   // Burada 'j>-1' 'temp < arr[j]'den önce yazılmazsa 'temp < arr[j]' hata verir
                 arr[j+1] = arr[j];
                 arr[j] = temp;
                 j--;
             }
 
-        }
+        } 
 
     }
 

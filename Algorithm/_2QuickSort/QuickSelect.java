@@ -29,7 +29,7 @@ public class QuickSelect {
 
     private static int partition(int[] arr, int low, int high){
         int pivot = arr[high];
-        int i = low;
+        int i = low; 
         
         for (int j = low; j < high; j++) {
             if (arr[j] <= pivot) {
