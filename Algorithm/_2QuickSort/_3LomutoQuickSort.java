@@ -8,7 +8,7 @@ package Algorithm._2QuickSort;
 // İşlem bittiğinde PİVOTU ALMADAN, sol taraftakileri ve sağ taraftakileri ayrı ayrı recursice şekilde tekrar atıyoruz
 
 
-public class LomutoQuickSort {
+public class _3LomutoQuickSort {
     
     public static void main(String[] args) {
         

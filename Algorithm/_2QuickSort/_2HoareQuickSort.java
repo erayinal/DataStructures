@@ -18,7 +18,7 @@ package Algorithm._2QuickSort;
 /// Bu işlem bittikten sonra Hoare algoritması diyor ki: ikiye böl ve yukarıdaki işlemi tekrar yap. Tabi yeni elemanda pivot artık değişecek ve ilk eleman olarak belirlenecek
 
 
-public class HoareQuickSort {
+public class _2HoareQuickSort {
 
     public static void main(String[] args) {
 

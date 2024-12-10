@@ -3,7 +3,7 @@ package Algorithm._2QuickSort;
 // k'nıncı en küçük veya en büyük elemanı bulma soruları veya median(sıralayınca ortadaki eleman) bulma soruları quickSort ile yapılır
 // Burada mantık şöyledir: 
 
-public class QuickSelect {
+public class _1QuickSelect {
 
     public static void main(String[] args) {
         
