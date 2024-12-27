@@ -1,5 +1,8 @@
 package Algorithm._4DynamicProgramming;
 
+// Total Runtime = O(m.n)
+// Total Space = O(m.n)
+
 public class _1Lcs {
     
 
@@ -7,8 +10,6 @@ public class _1Lcs {
 
         String s1 = "abcdef";
         String s2 = "acbcf";
-
-        //findLongestCommonSubstring(s1, s2);
 
         System.out.println(findLCSLength(s1, s2));
         
@@ -34,12 +35,14 @@ public class _1Lcs {
             }
         }
 
+        
         for (int i = 0; i < dp.length; i++) {
             for (int j = 0; j < dp[0].length; j++) {
                 System.out.print(dp[i][j]);
             }
             System.out.println();
         }
+        
 
         return dp[n][m];
     }
